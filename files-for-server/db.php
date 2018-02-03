@@ -6,8 +6,8 @@ $password = 'udacitywall';
 $database_name = 'udacitywall';
 $mysqli = new mysqli($server,$username,$password,$database_name) or die($mysqli->error);
 
-$result = $mysqli->query("SELECT * FROM users");
+$result = $mysqli->query("SELECT * FROM users WHERE name = 'Paolo'");
 
 $user = $result->fetch_assoc();
 
-echo $user['name'];
+echo $user['email'];
